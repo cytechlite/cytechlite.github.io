@@ -1,0 +1,208 @@
+<head>
+<style>@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,800);
+
+	body {
+	  background: #00ff55;
+	  font-family: 'Open Sans';
+	  font-size: 1.3em;
+	  padding: 0;
+	  margin: 0;
+	}
+	a {
+	  text-decoration: none;
+	  color: white;
+	  text-indent: 123;
+	}
+	#nav {
+	  background: #18929D;
+	  position: fixed;
+	  z-index: 1000;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	}
+	#nav ul{
+	  list-style: none;
+	}
+	#nav ul{
+	  list-style: none;
+	}
+	#nav li {
+	  display: inline-block;
+	  padding: 10px;
+		border-radius: 5px;
+	}
+	#nav li:hover {
+	  background: aquamarine;
+	}
+	#nav li:hover a{
+	  color: black;
+	}
+	.content {
+	  padding-top: 90px;
+	}
+	.anchor {
+	  display: block; 
+	}
+	.title {
+	  position: relative;
+	  display: block;
+	  top: -50px;
+	  padding: 20px 0;
+	  font-size: 1.9em;
+	}
+	.title:before{
+	  font-size: 1.5em;
+	}
+	.title:after{
+	  font-size: 1.5em;	  
+	}
+	.page-divider {
+	  margin: 0 auto;
+	  width: 100%;
+	  min-height: 500px;
+	  height: 100%; 
+	  overflow: hidden;
+	  background-size: cover;
+	}
+	.pgd1{background-image: url("https://images.pexels.com/photos/390051/surfer-wave-sunset-the-indian-ocean-390051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");}	
+	.pgd2{background-image: url("https://images.pexels.com/photos/757133/pexels-photo-757133.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");}
+	.page {
+	  min-width: 200px;
+	  padding: 50px 100px;
+	}
+	#page1 {background: whitesmoke;}
+	#page2 {background: whitesmoke;}
+	#page3 {background: #E6E6FA;}
+	
+	footer {
+		background-color: green;
+	  min-height: 200px;
+	  padding: 100px;
+	}
+	footer .container{
+		display: flex;
+		color: white;
+	}
+	footer .container ul{
+			width: 25%;
+	}
+	footer .container h3{
+		margin-bottom: 16px;
+		font-weight: 600;
+	}
+	footer .container ul > p{
+		margin-bottom: 40px;
+	}
+	
+	</style>
+	<script>(function ($) {
+		$.fn.arctic_scroll = function (options) {
+	
+			var defaults = {
+				elem: $(this),
+				speed: 500
+			};
+			var options = $.extend(defaults, options);
+	
+			options.elem.click(function(event){     
+				event.preventDefault();
+				var offset = ($(this).attr('data-offset')) ? $(this).attr('data-offset') : false,
+					position = ($(this).attr('data-position')) ? $(this).attr('data-position') : false;         
+				if (offset) {
+					var toMove = parseInt(offset);
+					$('html,body').stop(true, false).animate({scrollTop: ($(this.hash).offset().top + toMove) }, options.speed);
+				} else if (position) {
+					var toMove = parseInt(position);
+					$('html,body').stop(true, false).animate({scrollTop: toMove }, options.speed);
+				} else {
+					$('html,body').stop(true, false).animate({scrollTop: ($(this.hash).offset().top) }, options.speed);
+				}
+			});
+	
+		};
+	})(jQuery);
+	
+	$(function(){
+		$(".scroller").arctic_scroll({
+			speed: 600
+		});
+	});</script>
+</head>
+
+<body>
+
+	<header>           
+     
+		<div id="nav">			
+			<ul>
+			<li><a href="#bemvindo" class="scroller" data-offset="-140">Bem Vindo</a></li>
+			<li><a href="#portfolio" class="scroller" data-offset="-139">Portfolio</a></li>
+			<li><a href="#contato" class="scroller" data-offset="-139">Contato</a></li>
+		  </ul>
+		</div>
+		</header>
+		
+		<body>
+		<div class="content">
+			
+		  
+		  <div class="page" id="page1" >
+			
+			<a class="anchor" id="bemvindo"></a>
+			  <div class="title ttl1">Seja bem vindo a nossa escola de SURF</div>
+			  
+			   
+			<p><strong>Olá!</strong> Obrigada por visitar o nosso site!</p>
+			
+			<p>texto </p>
+			
+			  <p>O surfe ou surf é um esporte feito na superfície (seu nome provém da palavra inglesa “surface”) da água. Basicamente, consiste no deslize pelas ondas do mar através de uma prancha. Acredita-se que o esporte surgiu quando pescadores perceberam que usando uma tábua de madeira, era mais fácil chegar à margem do mar. A prática do surfe requer alguns cuidados. É recomendável a realização de aulas de surfe antes de se aventurar no mar em cima de uma prancha. É na aula que o aluno recebe noções referentes a movimentos básicos, alongamento, ondas, marés, ventos, etc. O surfe é apaixonante para seus adeptos, e se tomados os cuidados necessários, continua sendo uma ótima opção de esporte.
+				</p></div>
+		
+		  <div class="page-divider pgd1"></div>
+			
+		  <div class="page" id="page2">
+			<a class="anchor" id="portfolio"></a>
+			  <div class="title">Portfolio</div>
+			  <p>Aberta o ano inteiro, a Escola funciona todos os dias e em qualquer estação do ano, incluindo finais de semana e feriados. As aulas podem ser agendadas no local, por telefone ou internet.
+					Visando sempre a aprendizagem do aluno e aluna, a Escola mantém turmas reduzidas e com o mesmo nível de surf. Nos meses de alta temporada, trabalha com um número máximo de 5 alunos por aula. O material necessário para as aulas é todo fornecido pela Escola, incluindo roupas de borracha para o frio e registro das melhores ondas em fotos e vídeos.</p>
+				<p></p>			
+					
+				</div>
+		
+		  <div class="page-divider pgd2"></div>
+		  
+		  <div class="page" id="page3">
+			<a class="anchor" id="contato"></a>
+			  <div class="title">Contato</div>
+			  <p>
+					<ul>
+						<li>(81)994582312</li>
+						<li>instagram@mksurf</li>
+					</ul>
+
+				</p> 
+			 </div>
+		  
+		</div>
+		</body>
+		
+		<footer>
+				<div class="container">
+					<ul>
+						<h3>MKsurf</h3>
+						<p>Localização: Praia de Cabedelo - João Pessoa/PB , km 50 , proximo ao bar do Macaco. </p>
+											
+					</ul>
+					<ul>
+						<h3>Patrocinadores</h3>
+						<li><a href="#">Hang-loose</a></li>
+						<li><a href="#">Mormaii</a></li>
+						<li><a href="#">Hurley</a></li>
+						<li><a href="#">Fico</a></li>
+					</ul>					
+				</div>
+		</footer>
+
+</body>
